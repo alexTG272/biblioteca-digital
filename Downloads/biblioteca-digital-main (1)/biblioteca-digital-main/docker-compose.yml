@@ -1,0 +1,32 @@
+version: '3.8'
+services:
+  # Tu microservicio de Biblioteca Digital
+  biblioteca-app:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_PROFILES_ACTIVE=prod
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://biblioteca-db:5432/bibliotecadb
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=rootpassword
+    depends_on:
+      - biblioteca-db
+    networks:
+      - biblioteca-network
+
+  # Base de datos asociada para simular una solución de mediana envergadura
+  biblioteca-db:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: rootpassword
+      POSTGRES_DB: bibliotecadb
+    ports:
+      - "5432:5432"
+    networks:
+      - biblioteca-network
+
+networks:
+  biblioteca-network:
+    driver: bridge
