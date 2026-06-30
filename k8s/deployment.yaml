@@ -17,7 +17,8 @@ spec:
       containers:
       - name: biblioteca-digital-app
         # IMPORTANTE: Cambia "tu-usuario-docker" por tu usuario real de Docker Hub
-        image: AlexTorres27/biblioteca-digital:latest
+        image: alextorres27/biblioteca-digital:latest
+        imagePullPolicy: Never
         ports:
         - containerPort: 8080
         resources:
