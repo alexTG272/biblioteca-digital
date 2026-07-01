@@ -7,6 +7,9 @@ Integrantes: Martina Flores y Alexander torres
 # Tecnologias utilizadas
 Control de versiones: Git & Github
 CI/CD: Github Actions
+Backend: Java & Spring Boot  
+Orquestación y Contenedores: Docker & Kubernetes (vía Minikube)  
+Monitoreo y Observabilidad: Prometheus & Grafana  
 
 # GitFlow
 Hemos implementado GitFlow como estrategia de ramificacion, organizando las ramas de cierta forma:
@@ -27,9 +30,11 @@ fix: Correcion de errrires
 Docs: Documentacion
 Chore: Tareas de mantenimiento
 
+# Arquitectura de Despliegue y Orquestación (Kubernetes)
+El microservicio se despliega de manera automatizada dentro de un entorno local orquestado con Kubernetes, utilizando Minikube con el driver de Docker bajo entornos Windows (Docker Desktop).
 
-Captura de pantallas mediante un pdf
-PDF:[Eva1_ing_devops (1).pdf](https://github.com/user-attachments/files/26731082/Eva1_ing_devops.1.pdf)
+# Monitoreo, Métricas y Dashboards (Prometheus & Grafana)
+Para cumplir con las demandas de observabilidad y toma de decisiones operacionales, se integró una infraestructura con Prometheus (recolector de métricas/logs) y Grafana (visualización).
 
-  
 
+pdf de evidencias: [evidencias_ingeneriadevops.docx](https://github.com/user-attachments/files/29529717/evidencias_ingeneriadevops.docx)
